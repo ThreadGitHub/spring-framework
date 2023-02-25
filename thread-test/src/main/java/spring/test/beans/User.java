@@ -2,6 +2,7 @@ package spring.test.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import spring.test.annotation.Print;
 
 @Component
 public class User {
@@ -10,6 +11,7 @@ public class User {
 	@Autowired
 	private People people;
 
+	@Print
 	public void sayHi() {
 		System.out.println("hello !");
 	}
