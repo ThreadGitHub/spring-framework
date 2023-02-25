@@ -1,5 +1,7 @@
 package spring.test.aspect;
 
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -13,6 +15,13 @@ public class PrintAspect {
 
 	@Before("point()")
 	public void beforePoint() {
-		System.out.println("print注解嗷嗷嗷-before通知");
+		System.out.println("print注解Before通知---before通知");
+	}
+
+	@Around("point()")
+	public void aroundPoint(ProceedingJoinPoint joinPoint) throws Throwable {
+		System.out.println("print注解环绕通知---Around之前");
+		joinPoint.proceed();
+		System.out.println("print注解环绕通知---Around之后");
 	}
 }

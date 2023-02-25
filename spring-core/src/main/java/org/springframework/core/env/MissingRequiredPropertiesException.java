@@ -20,7 +20,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * Exception thrown when required properties are not found.
+ * <p>Exception thrown when required properties are not found.</p>
+ * <p>翻译：必须的配置没有找到会抛出异常</p>
  *
  * @author Chris Beams
  * @since 3.1
@@ -30,7 +31,9 @@ import java.util.Set;
  */
 @SuppressWarnings("serial")
 public class MissingRequiredPropertiesException extends IllegalStateException {
-
+	/**
+	 * 存储缺失的必须配置用于异常的提示
+	 */
 	private final Set<String> missingRequiredProperties = new LinkedHashSet<>();
 
 

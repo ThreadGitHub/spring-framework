@@ -10,6 +10,5 @@ public class SpringTestMain {
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		User user = applicationContext.getBean(User.class);
 		user.sayHi();
-		System.out.println(user);
 	}
 }

@@ -19,10 +19,13 @@ package org.springframework.context;
 import java.util.EventListener;
 
 /**
- * Interface to be implemented by application event listeners.
+ * <p>Interface to be implemented by application event listeners.</p>
+ * <p>翻译：应用程序事件监听需要实现的接口</p>
  *
  * <p>Based on the standard {@code java.util.EventListener} interface
- * for the Observer design pattern.
+ * <p>基于一个标准的 EventListener 接口</p>
+ * <p>for the Observer design pattern.</p>
+ * <p>翻译：来自观察者设计模式</p>
  *
  * <p>As of Spring 3.0, an {@code ApplicationListener} can generically declare
  * the event type that it is interested in. When registered with a Spring
