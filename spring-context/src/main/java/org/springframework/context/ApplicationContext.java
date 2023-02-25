@@ -59,32 +59,37 @@ public interface ApplicationContext extends EnvironmentCapable, ListableBeanFact
 		MessageSource, ApplicationEventPublisher, ResourcePatternResolver {
 
 	/**
-	 * Return the unique id of this application context.
+	 * <p>Return the unique id of this application context.</p>
+	 * <p>翻译：返回这个Spring容器的唯一id</p>
 	 * @return the unique id of the context, or {@code null} if none
 	 */
 	@Nullable
 	String getId();
 
 	/**
-	 * Return a name for the deployed application that this context belongs to.
+	 * <p>Return a name for the deployed application that this context belongs to.</p>
+	 * <p>翻译：返回这个上下文中已部署应用的名字</p>
 	 * @return a name for the deployed application, or the empty String by default
 	 */
 	String getApplicationName();
 
 	/**
-	 * Return a friendly name for this context.
+	 * <p>Return a friendly name for this context.</p>
+	 * <p>翻译：返回对于这个容器一个友好的名称</p>
 	 * @return a display name for this context (never {@code null})
 	 */
 	String getDisplayName();
 
 	/**
-	 * Return the timestamp when this context was first loaded.
+	 * <p>Return the timestamp when this context was first loaded.</p>
+	 * <p>翻译：返回上下文第一次加载完成的时间戳</p>
 	 * @return the timestamp (ms) when this context was first loaded
 	 */
 	long getStartupDate();
 
 	/**
-	 * Return the parent context, or {@code null} if there is no parent
+	 * <p>Return the parent context, or {@code null} if there is no parent</p>
+	 * <p>翻译返回一个父级上下文对象，如果没有父级返回null</p>
 	 * and this is the root of the context hierarchy.
 	 * @return the parent context, or {@code null} if there is no parent
 	 */
@@ -93,6 +98,7 @@ public interface ApplicationContext extends EnvironmentCapable, ListableBeanFact
 
 	/**
 	 * Expose AutowireCapableBeanFactory functionality for this context.
+	 * <p>翻译：暴露这个context的 自动注入bean工厂 AutowireCapableBeanFactory</p>
 	 * <p>This is not typically used by application code, except for the purpose of
 	 * initializing bean instances that live outside of the application context,
 	 * applying the Spring bean lifecycle (fully or partly) to them.
