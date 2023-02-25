@@ -42,6 +42,8 @@ import org.springframework.util.Assert;
  *
  * <p>See {@link Configuration @Configuration}'s javadoc for usage examples.
  *
+ * 注解配置类的形式加载Spring容器
+ *
  * @author Juergen Hoeller
  * @author Chris Beams
  * @since 3.0
