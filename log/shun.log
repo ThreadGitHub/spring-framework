@@ -1,0 +1,16 @@
+[DEBUG][23-03-28][spring.test.SpringTestMain]test
+[DEBUG][23-03-28][org.springframework.context.annotation.AnnotationConfigApplicationContext]Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@f4168b8
+[DEBUG][23-03-28][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+[DEBUG][23-03-28][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]Identified candidate component class: file [D:\JavaFrameSourceCode\Spring\spring-framework\thread-test\build\classes\java\main\spring\test\aspect\PrintAspect.class]
+[DEBUG][23-03-28][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]Identified candidate component class: file [D:\JavaFrameSourceCode\Spring\spring-framework\thread-test\build\classes\java\main\spring\test\beans\People.class]
+[DEBUG][23-03-28][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]Identified candidate component class: file [D:\JavaFrameSourceCode\Spring\spring-framework\thread-test\build\classes\java\main\spring\test\beans\User.class]
+[DEBUG][23-03-28][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+[DEBUG][23-03-28][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+[DEBUG][23-03-28][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+[DEBUG][23-03-28][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+[DEBUG][23-03-28][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'appConfig'
+[DEBUG][23-03-28][org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory]Found AspectJ method: public void spring.test.aspect.PrintAspect.aroundPoint(org.aspectj.lang.ProceedingJoinPoint) throws java.lang.Throwable
+[DEBUG][23-03-28][org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory]Found AspectJ method: public void spring.test.aspect.PrintAspect.beforePoint()
+[DEBUG][23-03-28][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'printAspect'
+[DEBUG][23-03-28][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'people'
+[DEBUG][23-03-28][org.springframework.beans.factory.support.DefaultListableBeanFactory]Creating shared instance of singleton bean 'user'

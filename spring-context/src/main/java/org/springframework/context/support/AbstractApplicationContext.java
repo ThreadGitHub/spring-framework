@@ -524,8 +524,10 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 
 	@Override
 	public void refresh() throws BeansException, IllegalStateException {
+		//对象锁
 		synchronized (this.startupShutdownMonitor) {
 			// Prepare this context for refreshing.
+			// 准备上下文刷新操作
 			prepareRefresh();
 
 			// Tell the subclass to refresh the internal bean factory.
@@ -557,6 +559,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 				registerListeners();
 
 				// Instantiate all remaining (non-lazy-init) singletons.
+				// 实例化全部剩余(非懒加载) 单例-对象
 				finishBeanFactoryInitialization(beanFactory);
 
 				// Last step: publish corresponding event.
@@ -590,14 +593,15 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	/**
 	 * Prepare this context for refreshing, setting its startup date and
 	 * active flag as well as performing any initialization of property sources.
+	 * <p>翻译：准备这个上下文的刷新, 设置他的启动时间和激活标志等</p>
 	 */
 	protected void prepareRefresh() {
 		// Switch to active.
-		//修改启动时间
+		// 修改启动时间
 		this.startupDate = System.currentTimeMillis();
-		//当前context关闭状态改为false
+		// 当前context关闭状态改为false
 		this.closed.set(false);
-		//把当前context容器激活状态的标志设为 true
+		// 把当前context容器激活状态的标志设为 true
 		this.active.set(true);
 
 		//spring Debug日志是否开启,如果开启就打印 刷新的容器信息
@@ -611,16 +615,16 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		}
 
 		// Initialize any placeholder property sources in the context environment.
-		//初始化上下文环境中的任何占位符属性源
+		// 初始化上下文环境中的任何占位符属性源
 		initPropertySources();
 
 		// Validate that all properties marked as required are resolvable:
-		//验证标记为要求的所有属性都是可解析的
+		// 验证标记为要求的所有属性都是可解析的
 		// see ConfigurablePropertyResolver#setRequiredProperties
 		getEnvironment().validateRequiredProperties();
 
 		// Store pre-refresh ApplicationListeners...
-		//存储预准备刷新应用监听
+		// 存储预准备刷新应用监听
 		if (this.earlyApplicationListeners == null) {
 			this.earlyApplicationListeners = new LinkedHashSet<>(this.applicationListeners);
 		}

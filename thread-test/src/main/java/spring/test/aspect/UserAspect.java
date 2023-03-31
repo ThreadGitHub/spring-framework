@@ -3,7 +3,7 @@ package spring.test.aspect;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 @Aspect
 public class UserAspect {
 	@Pointcut("execution(* spring.test.beans.User.sayHi(..))")

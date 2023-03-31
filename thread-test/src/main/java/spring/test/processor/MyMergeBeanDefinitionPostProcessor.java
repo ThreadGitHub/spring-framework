@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 /**
  * bean的生命周期的扩展处理器 允许修改合并后的类定义对象
  */
-@Component
+//@Component
 public class MyMergeBeanDefinitionPostProcessor implements MergedBeanDefinitionPostProcessor {
 	@Override
 	public void postProcessMergedBeanDefinition(RootBeanDefinition beanDefinition, Class<?> beanType, String beanName) {
 		FileSystemResource fileSystemResource = (FileSystemResource) beanDefinition.getSource();
-		System.out.println(fileSystemResource);
+//		System.out.println(fileSystemResource);
 	}
 }

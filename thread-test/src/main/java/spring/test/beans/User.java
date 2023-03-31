@@ -1,15 +1,11 @@
 package spring.test.beans;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import spring.test.annotation.Print;
 
 @Component
 public class User {
 	private String name;
-
-	@Autowired
-	private People people;
 
 	@Print
 	public void sayHi() {
@@ -28,7 +24,6 @@ public class User {
 	public String toString() {
 		return "User{" +
 				"name='" + name + '\'' +
-				", people=" + people +
 				'}';
 	}
 }

@@ -140,6 +140,7 @@ public @interface Cacheable {
 
 	/**
 	 * Spring Expression Language (SpEL) expression used to veto method caching.
+	 * <p>翻译：用于否决方法缓存的Spring表达式语言 (SpEL) 表达式</p>
 	 * <p>Unlike {@link #condition}, this expression is evaluated after the method
 	 * has been called and can therefore refer to the {@code result}.
 	 * <p>Default is {@code ""}, meaning that caching is never vetoed.

@@ -25,6 +25,7 @@ import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
+import org.springframework.util.ObjectUtils;
 
 /**
  * Standalone application context, accepting <em>component classes</em> as input &mdash;
@@ -65,7 +66,9 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 * through {@link #register} calls and then manually {@linkplain #refresh refreshed}.
 	 */
 	public AnnotationConfigApplicationContext() {
+		//创建注解bean定义读取器
 		this.reader = new AnnotatedBeanDefinitionReader(this);
+		//
 		this.scanner = new ClassPathBeanDefinitionScanner(this);
 	}
 
